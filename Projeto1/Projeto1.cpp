@@ -83,13 +83,8 @@ void controlador (float ro, float alfa, float beta, float *velocidadeLinear, flo
 
 void calcularErro(simxFloat posicao[3], simxFloat objetivo[3], float* erro) {
   for (int i = 0 ; i < 3; i++) {
-    if (i == 2) {
-      erro[i] = to_deg(objetivo[i] - posicao[i]);
-    } else {
       erro[i] = objetivo[i] - posicao[i];
-    }
   }
-  
   printf("Erro: [%.2f %.2f %.2f°]", erro[0], erro[1], to_deg(erro[2]));
 }
 
